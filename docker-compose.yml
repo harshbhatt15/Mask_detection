@@ -1,0 +1,13 @@
+services:
+  notebook:
+    build: .
+    container_name: mask_detection_notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - "D:/csv/archive (1)/data:/data"
+      - ".:/app"
+    working_dir: /app
+    environment:
+      - PYTHONUNBUFFERED=1
+      
