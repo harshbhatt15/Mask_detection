@@ -1,11 +1,16 @@
-FROM python:3.10-slim
+FROM python:3.10-slim  
+# minimal version, no unnecessary packages
 
 WORKDIR /workspace
+# Creates a folder /workspace inside the container
 
-ENV PYTHONDONTWRITEBYTECODE=1 \
+ENV PYTHONDONTWRITEBYTECODE=1 \  
+# """stops Python from creating .pyc cache files (keeps container clean)"""
     PYTHONUNBUFFERED=1
+# prints logs instantly to terminal instead of buffering them
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+
+RUN apt-get update && apt-get install -y --no-install-recommends \          
     libgl1 \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*

@@ -1,5 +1,5 @@
 # Jupyter checkpoints
-.ipynb_checkpoints/
+.ipynb_checkpoints/mask_detection_pytorch-checkpoint.ipynb
 
 # Local wheels beacuse it is too large for GitHub
 wheels/
